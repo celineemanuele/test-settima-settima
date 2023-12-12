@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oro Giallo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-warning d-flex align-items-baseline" data-bs-theme="dark">
+            <div class=" container-fluid">
+                    <img src="img/logo.avif" alt="Logo" width="100" height="100"
+                        class="d-inline-block ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="home_page.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="backoffice.html">Backoffice</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <h2 class="mb-3 ">Inserisci nuovo prodotto</h1>
+                                <form id="form">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Nome prodotto</label>
+                                        <input class="form-control" id="name" aria-describedby="name input"
+                                            placeholder="nome prodotto ...." required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="description" class="form-label">Decrizione Prodotto</label>
+                                        <textarea class="form-control" id="description" rows="6" aria-describedby="name input" placeholder="Aggiungere Descrizione Prodotto" required></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="brand" class="form-label">Gusto</label>
+                                        <select class="form-select" aria-label="Default select example" id="brand"
+                                            required>
+                                            <option value="Acacia">Acacia</option>
+                                            <option value="Arancia">Arancia</option>
+                                            <option value="Castagno">castagno</option>
+                                            <option value="Eucalipto">Eucalipto</option>
+                                            <option value="Eucalipto">Millefiori</option>
+                                            <option value="Eucalipto">Sulla</option>
+                                            <option value="Eucalipto">Tiglio</option>
+                                            <option value="Eucalipto">Timo</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="imageUrl" class="form-label"> URL dell'immagine del prodotto</label>
+                                        <input class="form-control" id="imageUrl" aria-describedby="name input"
+                                            placeholder="Inserisci l'URL dell'Immagine del prodotto..." required />
+                                    </div>
+                                    <div class="mb-5">
+                                        <label for="price" class="form-label">Prezzo Prodotto</label>
+                                        <input type="number" class="form-control" id="price"
+                                            aria-describedby="price input" placeholder="Prezzo Prodotto..."
+                                            required />
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <button type="submit" class=" btn btn-success" id="submit">AGGIUNGERE PRODOTTO</button>
+                                            <button type="reset" class="btn btn-warning">RESETTARE</button>
+
+                                        </div>
+                                        <button type="button" id="delete" class="btn btn-danger">ELIMINARE</button>
+                                    </div>
+                                </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
