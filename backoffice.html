@@ -36,7 +36,7 @@
         </nav>
     </header>
 
-    <div class="container-fluid">
+   <!---<div class="container-fluid">
         <div class="container my-5">
             <div class="row justify-content-center">
                 <div class="col">
@@ -55,8 +55,7 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="brand" class="form-label">Gusto</label>
-                                        <select class="form-select" aria-label="Default select example" id="brand"
-                                            required>
+                                        <select class="form-select" aria-label="Default select example" id="brand"required>
                                             <option value="Acacia">Acacia</option>
                                             <option value="Arancia">Arancia</option>
                                             <option value="Castagno">castagno</option>
@@ -81,9 +80,9 @@
                                     <div class="buttonGroup mt-4">
                                         <button id="addItem" class="btn text-light bg-warning px-4 me-3">Aggiungi</button>
                                         <button id="removeAll" class="btn btn-outline-warning">Cancella tutto</button>
-                                    </div>-->
-                                     <!---class="btn text-light bg-warning m-3">Invia</button>--->
-                                    <!--<div class="d-flex justify-content-between">
+                                    </div>
+                                     class="btn text-light bg-warning m-3">Invia</button>
+                                    <div class="d-flex justify-content-between">
                                             <button type="submit" class=" btn text-light bg-warning " id="addItem">AGGIUNGERE PRODOTTO</button>
 
                                         
@@ -101,7 +100,28 @@
 
             </div>
         </div>
-    </div>
+    </div>-->
+    <main class="ms-5 mt-3">
+        <div id="form_addItem" class="container-fluid d-flex">
+            <h1 class="text-white pb-3 ps-3 mb-3 border-bottom border-warning">Aggiungi prodotto</h1>
+            <div>
+                <label for="name" class="text-white mb-1">Inserisci il nome del prodotto:</label>
+                <input type="text" id="name" placeholder="Inserisci il nome" class="add-item bg-dark border border-warning ms-1 mb-2 p-1 text-white">
+                <label for="description" class="text-white mb-1">Inserisci la descrizione del prodotto:</label>
+                <input type="text" id="description" placeholder="Inserisci la descrizione" class="add-item bg-dark border border-warning ms-1 mb-2 p-1 text-white">
+                <label for="brand" class="text-white mb-1">Inserisci il nome del brand:</label>
+                <input type="text" id="brand" placeholder="Inserisci il brand" class="add-item bg-dark border border-warning ms-1 mb-2 p-1 text-white">
+                <label for="imageUrl" class="text-white mb-1">Inserisci il link dell'immagine:</label>
+                <input type="text" id="imageUrl" placeholder="Inserisci l'imageUrl" class="add-item bg-dark border border-warning ms-1 mb-2 p-1 text-white">
+                <label for="price" class="text-white mb-1">Inserisci il prezzo del prodotto:</label>
+                <input type="text" id="price" placeholder="Inserisci il prezzo" class="add-item bg-dark border border-warning ms-1 mb-2 p-1 text-white">
+            </div>
+            <div class="buttonGroup mt-4">
+                <button id="addItem" class="btn btn-outline-light px-4 me-3">Aggiungi</button>
+                <button id="removeAll" class="btn btn-outline-warning">Cancella tutto</button>
+            </div>
+        </div>
+    </main>
 
     <footer class="text-center text-lg-start">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
