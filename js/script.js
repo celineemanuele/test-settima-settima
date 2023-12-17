@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     getData(endpoint);
     if (window.location.pathname.includes('backoffice.html')) {
-        document.querySelector("#addItem").addEventListener('click', () => {addNewProductCard()});
+        document.querySelector("#addItem").addEventListener('click', addNewProductCard);
     }
 });
 
@@ -54,11 +54,13 @@ function postData(data, endpoint) {
         
     })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data)
+        })
         .catch(err => console.log(err))
 }
 
-function addNewProductCard() {
+ async function addNewProductCard() {
     let nome = document.querySelector('#name').value;
     console.log(nome);
     let descrizione = document.querySelector('#description').value;
@@ -66,9 +68,9 @@ function addNewProductCard() {
     console.log(marca);
     let immagine = document.querySelector('#imageUrl').value;
     let prezzo = document.querySelector('#price').value;
-    let p = new Product(nome, descrizione, marca, immagine, prezzo);
-    console.log(p);
-    postData(p, endpoint);
+    let newProduct = new Product(nome, descrizione, marca, immagine, prezzo);
+    console.log(newProduct);
+    postData(newProduct, endpoint);
 }
 
 function createProductCards() {
@@ -88,7 +90,7 @@ function createProductCards() {
                         <div class="card-body p-0">
                             <p class="nameClass card-title fs-3 text-white fw-semibold border-bottom border-warning p-2 mb-0">${element.name}</p>
                             <p class="descriptionClass card-text">${element.description}</p>
-                            <p class="brandClass card-text text-secondary">${element.brand}</p>
+                            <p class="brandClass card-text text-black">${element.brand}</p>
                             <p class="priceClass card-text fs-4 text-warning">€ ${element.price}</p>
                         </div>
                       </div>
@@ -98,7 +100,7 @@ function createProductCards() {
         .catch(err => console.log(err));
 }
 
-document.querySelector("#removeAll").addEventListener('click', () => {
+document.getElementById("removeAll").addEventListener('click', () => {
     let idArray = [];
   
     fetch(endpoint, {
